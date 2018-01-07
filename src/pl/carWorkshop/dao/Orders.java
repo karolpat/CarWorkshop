@@ -48,6 +48,10 @@ public class Orders {
 		return id;
 	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public Timestamp getOrderDate() {
 		return orderDate;
 	}

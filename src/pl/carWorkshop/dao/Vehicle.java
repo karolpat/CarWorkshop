@@ -1,6 +1,7 @@
 package pl.carWorkshop.dao;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.Year;
 
 public class Vehicle {
@@ -10,12 +11,12 @@ public class Vehicle {
 	private String brand;
 	private Year productionYear;
 	private String registNumber;
-	private Date reviewDate;
+	private Timestamp reviewDate;
 
 	public Vehicle() {
 	}
 
-	public Vehicle(String model, String brand, Year productionYear, String registNumber, Date reviewDate) {
+	public Vehicle(String model, String brand, Year productionYear, String registNumber, Timestamp reviewDate) {
 		this.setModel(model);
 		this.setBrand(brand);
 		this.setProductionYear(productionYear);
@@ -66,11 +67,11 @@ public class Vehicle {
 		this.registNumber = registNumber;
 	}
 
-	public Date getReviewDate() {
+	public Timestamp getReviewDate() {
 		return reviewDate;
 	}
 
-	public void setReviewDate(Date reviewDate) {
+	public void setReviewDate(Timestamp reviewDate) {
 		this.reviewDate = reviewDate;
 	}
 

@@ -8,6 +8,9 @@
 <title>Insert title here</title>
 </head>
 <style>
+body {
+	background-color: pink;
+}
 table, th, td {
 	border: 2px solid black;
 	border-collapse: collapse;

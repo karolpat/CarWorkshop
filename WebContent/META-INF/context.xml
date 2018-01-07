@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-<Resourse name="jdbc/crm"
+<Resourse name="crm"
 auth = "Container"
 type = "javax.sql.DataSource"
 username = "root"

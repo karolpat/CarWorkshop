@@ -33,7 +33,16 @@ public class EmpOptions extends HttpServlet {
 		if (execute == 1) {
 			request.setAttribute("emp", emp);
 			getServletContext().getRequestDispatcher("/empEdition.jsp").forward(request, response);
+		}else if(execute ==2) {
+			try {
+				EmployeeDao.delete(who);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			response.sendRedirect("/CarWorkshop/employeePage");;
+			
 		}
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

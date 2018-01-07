@@ -9,14 +9,14 @@ public class Vehicle {
 	private int id;
 	private String model;
 	private String brand;
-	private Year productionYear;
+	private String productionYear;
 	private String registNumber;
 	private Timestamp reviewDate;
 
 	public Vehicle() {
 	}
 
-	public Vehicle(String model, String brand, Year productionYear, String registNumber, Timestamp reviewDate) {
+	public Vehicle(String model, String brand, String productionYear, String registNumber, Timestamp reviewDate) {
 		this.setModel(model);
 		this.setBrand(brand);
 		this.setProductionYear(productionYear);
@@ -33,6 +33,11 @@ public class Vehicle {
 
 	public int getId() {
 		return id;
+	}
+	
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getModel() {
@@ -51,11 +56,11 @@ public class Vehicle {
 		this.brand = brand;
 	}
 
-	public Year getProductionYear() {
+	public String getProductionYear() {
 		return productionYear;
 	}
 
-	public void setProductionYear(Year productionYear) {
+	public void setProductionYear(String productionYear) {
 		this.productionYear = productionYear;
 	}
 

@@ -28,7 +28,7 @@
 					<td>${emp.phoneNumber }</td>
 					<td>${emp.workHourCost}</td>
 					<td><a href="/CarWorkshop/empOptions?do=1&who=${emp.id }">Edit</a></br>
-					<a href="/CarWorkshop/employeePage?do=2">Delete</a></br>
+					<a href="/CarWorkshop/empOptions?do=2&who=${emp.id }">Delete</a></br>
 					<a href="/CarWorkshop/employeePage?do=3">Show orders</a></td>
 				</tr>
 			</c:forEach>

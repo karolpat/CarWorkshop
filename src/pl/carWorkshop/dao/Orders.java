@@ -12,11 +12,11 @@ public class Orders {
 	private int employee_id;
 	private String problemDesc;
 	private String fixDesc;
-	private int status_id;
 	private int car_id;
 	private double fixCost;
 	private double partsCost;
 	private double workHourCost;
+	private String status;
 	
 	
 	public Orders() {}
@@ -25,8 +25,8 @@ public class Orders {
 
 
 	public Orders(Timestamp orderDate, Timestamp plannedStartDate, Timestamp startDate, int employee_id,
-			String problemDesc, String fixDesc, int status_id, int car_id, double fixCost, double partsCost,
-			double workHourCost) {
+			String problemDesc, String fixDesc, int car_id, double fixCost, double partsCost,
+			double workHourCost, String status) {
 		
 		this.setOrderDate(orderDate);
 		this.setPlannedStartDate(plannedStartDate);
@@ -34,14 +34,23 @@ public class Orders {
 		this.setEmployee_id(employee_id);
 		this.setProblemDesc(problemDesc);
 		this.setFixDesc(fixDesc);
-		this.setStatus_id(status_id);
 		this.setCar_id(car_id);
 		this.setFixCost(fixCost);
 		this.setPartsCost(partsCost);
 		this.setWorkHourCost(workHourCost);
+		this.setStatus(status);
 	}
 
 
+
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 
 	public int getId() {
@@ -109,16 +118,6 @@ public class Orders {
 
 	public void setFixDesc(String fixDesc) {
 		this.fixDesc = fixDesc;
-	}
-
-
-	public int getStatus_id() {
-		return status_id;
-	}
-
-
-	public void setStatus_id(int status_id) {
-		this.status_id = status_id;
 	}
 
 

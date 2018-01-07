@@ -13,9 +13,9 @@ import pl.carWorkshop.DbUtil;
 public class OrdersDao {
 
 	
-	private static final String ADD_TO_DB = "insert into (orderDate, plannedStartDate, startDate, employee_id, problemDesc, fixDesc, status_id, car_id, fixCost, partsCost)"
+	private static final String ADD_TO_DB = "insert into (orderDate, plannedStartDate, startDate, employee_id, problemDesc, fixDesc, status, car_id, fixCost, partsCost)"
 			+ " values(?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE = "update orders set orderDate=?, plannedStartDate=?, startDate=?, employee_id=?, problemDesc=?, car_id=?, fixCost=?, partsCost=? where id=?";
+	private static final String UPDATE = "update orders set orderDate=?, plannedStartDate=?, startDate=?, employee_id=?, problemDesc=?, fixDesc=?, status=? car_id=?, fixCost=?, partsCost=? where id=?";
 	private static final String READ = "select * from orders";
 	private static final String READ_BY_ID = "select * from orders where id=";
 	private static final String DELETE = "delete from orders where id=";
@@ -57,7 +57,7 @@ public class OrdersDao {
 				ord.setEmployee_id(res.getInt("employee_id"));
 				ord.setProblemDesc(res.getString("problemDesc"));
 				ord.setFixDesc(res.getString("fixDesc"));
-				ord.setStatus_id(res.getInt("status_id"));
+				ord.setStatus(res.getString("status"));
 				ord.setCar_id(res.getInt("car_id"));
 				ord.setFixCost(res.getDouble("fixCost"));
 				ord.setPartsCost(res.getDouble("partsCost"));
@@ -93,7 +93,7 @@ public class OrdersDao {
 				ord.setEmployee_id(res.getInt("employee_id"));
 				ord.setProblemDesc(res.getString("problemDesc"));
 				ord.setFixDesc(res.getString("fixDesc"));
-				ord.setStatus_id(res.getInt("status_id"));
+				ord.setStatus(res.getString("status"));
 				ord.setCar_id(res.getInt("car_id"));
 				ord.setFixCost(res.getDouble("fixCost"));
 				ord.setPartsCost(res.getDouble("partsCost"));
@@ -132,7 +132,7 @@ public class OrdersDao {
 			prep.setInt(4, ord.getEmployee_id());
 			prep.setString(5, ord.getProblemDesc());
 			prep.setString(6, ord.getFixDesc());
-			prep.setInt(7, ord.getStatus_id());
+			prep.setString(7, ord.getStatus());
 			prep.setInt(8, ord.getCar_id());
 			prep.setDouble(9, ord.getFixCost());
 			prep.setDouble(10, ord.getPartsCost());
@@ -164,7 +164,7 @@ public class OrdersDao {
 			prep.setInt(4, ord.getEmployee_id());
 			prep.setString(5, ord.getProblemDesc());
 			prep.setString(6, ord.getFixDesc());
-			prep.setInt(7, ord.getStatus_id());
+			prep.setString(7, ord.getStatus());
 			prep.setInt(8, ord.getCar_id());
 			prep.setDouble(9, ord.getFixCost());
 			prep.setDouble(10, ord.getPartsCost());

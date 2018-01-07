@@ -19,13 +19,16 @@ public class EmployeeDao {
 	private static final String READ_BY_ID = "select * from employee where id=";
 	private static final String DELETE = "delete from employee where id=";
 
-	public void delete(int id) throws SQLException {
+	public static void delete(int id) throws SQLException {
 
 		try (Connection conn = DbUtil.getConn()) {
 
 			Statement st = conn.createStatement();
-			ResultSet res = st.executeQuery(DELETE + id);
-
+			st.executeUpdate(DELETE+id);
+//			ResultSet res = st.executeQuery(DELETE + id);
+//			while(res.next()) {
+//				
+//			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Deleting employee failed");

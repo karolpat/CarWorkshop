@@ -141,7 +141,7 @@ public class EmployeeDao {
 	 * @return an instance of employee added to db
 	 * @throws SQLException
 	 */
-	public Employee addToDb(Employee emp) throws SQLException {
+	public static Employee addToDb(Employee emp) throws SQLException {
 
 		try (Connection conn = DbUtil.getConn();
 				PreparedStatement prep = conn.prepareStatement(ADD_TO_DB, PreparedStatement.RETURN_GENERATED_KEYS)) {

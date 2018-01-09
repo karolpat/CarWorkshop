@@ -8,6 +8,12 @@
 <title>Insert title here</title>
 </head>
 <style>
+button {
+	width: 650px;
+	height: 50px;
+	background-color: darkgray;
+	colos: white;
+}
 body {
 	background-color: pink;
 }
